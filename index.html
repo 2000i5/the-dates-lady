@@ -31,7 +31,6 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ظل للقسم */
-            overflow-x: auto; /* إضافة شريط التمرير الأفقي */
         }
         h2 {
             color: #333;
@@ -43,7 +42,7 @@
         .item {
             margin-bottom: 20px;
             cursor: pointer; /* إضافة مؤشر الفأرة للإشارة إلى أن العنصر قابل للنقر */
-            position: relative; /* لتحديد موقع السعر بالنسبة للصورة */
+            position: relative; /* لتحديد موقع شريط المنتجات بالنسبة للعنصر */
         }
         .item p {
             color: green; /* لون أسماء الأصناف */
@@ -77,6 +76,37 @@
             font-weight: bold; /* جعل النص عريضًا */
             color: #333; /* لون النص */
         }
+        /* تصميم شريط المنتجات المتحرك */
+        .products-slider {
+            overflow-x: auto; /* إضافة شريط التمرير الأفقي */
+            white-space: nowrap; /* جعل العناصر على سطر واحد دون الانتقال للسطر التالي */
+            padding: 10px 0; /* تباعد داخلي للشريط */
+        }
+        .product {
+            display: inline-block; /* عرض العناصر بشكل افقي */
+            margin-right: 20px; /* تباعد بين العناصر */
+        }
+        .product img {
+            width: 150px; /* تحديد عرض الصورة */
+            border-radius: 10px; /* إضافة تدوير للصورة */
+            transition: transform 0.3s ease; /* إضافة تأثير التحول */
+        }
+        .product:hover img {
+            transform: scale(1.1); /* تكبير الصورة عند تحويل المؤشر عليها */
+        }
+        .product .price {
+            position: absolute; /* لوضع السعر بالقرب من الصورة */
+            bottom: 0; /* لتحديد الموقع بالأسفل */
+            left: 0; /* لتحديد الموقع على اليسار */
+            background-color: rgba(255, 255, 255, 0.8); /* لون خلفية السعر */
+            padding: 5px; /* تباعد داخلي للسعر */
+            border-bottom-right-radius: 10px; /* تدوير الحواف للسعر */
+            transform: translateY(calc(100% - 10px)); /* تحريك السعر لأعلى بنسبة الارتفاع مع تباعد 10 بيكسل */
+            transition: transform 0.3s ease; /* إضافة تأثير التحول */
+        }
+        .product:hover .price {
+            transform: translateY(0); /* إعادة تحريك السعر للموضع الأصلي عند تحويل المؤشر عليها */
+        }
     </style>
 </head>
 <body>
@@ -88,33 +118,31 @@
     </header>
 
     <section class="section">
-        <h2>صياني الضيافة الكبيرة</h2>
-        <div class="item">
-            <img src="siniya1.jpg" alt="صينية تمر حشو مع زبدة" class="item-image">
-            <div class="price">
-                <p><span class="old-price">20</span> الكيلو: 15</p>
+        <h2>أفضل المنتجات</h2>
+        <div class="products-slider">
+            <div class="product">
+                <img src="product1.jpg" alt="منتج 1">
+                <div class="price">
+                    <p><span class="old-price">20</span> الكيلو: 15</p>
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="siniya2.jpg" alt="صينية بكيلة مع سمن" class="item-image">
-            <div class="price">
-                <p><span class="old-price">25</span> الكيلو: 20</p>
+            <div class="product">
+                <img src="product2.jpg" alt="منتج 2">
+                <div class="price">
+                    <p><span class="old-price">25</span> الكيلو: 20</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>بوكس التوزيع</h2>
-        <div class="item">
-            <img src="box1.jpg" alt="بوكس قشد" class="item-image">
-            <div class="price">
-                <p><span class="old-price">15</span> السعر: 10</p>
+            <div class="product">
+                <img src="product3.jpg" alt="منتج 3">
+                <div class="price">
+                    <p><span class="old-price">15</span> السعر: 10</p>
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="box2.jpg" alt="بوكس تمر سكري محشي" class="item-image">
-            <div class="price">
-                <p><span class="old-price">40</span> السعر: 35</p>
+            <div class="product">
+                <img src="product4.jpg" alt="منتج 4">
+                <div class="price">
+                    <p><span class="old-price">40</span> السعر: 35</p>
+                </div>
             </div>
         </div>
     </section>
