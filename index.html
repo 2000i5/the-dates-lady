@@ -10,7 +10,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: right;
-            background-color: #ccc2a7; /* خلفية للصفحة */
+            background-color: #5f8f87; /* خلفية للصفحة */
             padding: 20px;
         }
         header {
@@ -42,11 +42,9 @@
         .item {
             margin-bottom: 20px;
             cursor: pointer; /* إضافة مؤشر الفأرة للإشارة إلى أن العنصر قابل للنقر */
-            position: relative; /* لتحديد موقع النص بالنسبة للصورة */
         }
         .item p {
-            color: #333; /* لون النص */
-            margin: 0; /* إزالة التباعد الخارجي للنص */
+            color: green; /* لون أسماء الأصناف */
         }
         .old-price {
             color: red; /* لون السعر السابق */
@@ -57,26 +55,6 @@
             width: 30px; /* ضبط حجم شعار واتساب */
             margin-right: 5px; /* تباعد يمين الشعار */
             vertical-align: middle; /* ضبط محاذاة الشعار */
-        }
-        .item-image {
-            width: 100%; /* جعل الصورة تمتد على عرض العنصر */
-            height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
-            border-radius: 10px; /* إضافة تدوير للصورة */
-        }
-        .price-bar {
-            position: absolute; /* لوضع الشريط أسفل الصورة */
-            bottom: 0; /* لضبط الموقع بالأسفل */
-            left: 0; /* لضبط الموقع على اليسار */
-            width: 100%; /* جعل الشريط يمتد على عرض العنصر */
-            background-color: rgba(255, 255, 255, 0.7); /* خلفية شفافة للشريط */
-            padding: 5px; /* تباعد داخلي للشريط */
-            border-bottom-left-radius: 10px; /* تدوير الحواف للشريط */
-            border-bottom-right-radius: 10px; /* تدوير الحواف للشريط */
-        }
-        .price-bar p {
-            margin: 0; /* إزالة التباعد الخارجي للنص داخل الشريط */
-            font-weight: bold; /* جعل النص عريضًا */
-            color: #333; /* لون النص */
         }
     </style>
 </head>
@@ -91,40 +69,32 @@
     <section class="section">
         <h2>صياني الضيافة الكبيرة</h2>
         <div class="item">
-            <img src="siniya1.jpg" alt="صينية تمر حشو مع زبدة" class="item-image">
-            <div class="price-bar">
-                <p>السعر قبل الخصم: 20</p>
-                <p>الكيلو بعد الخصم: 15</p>
+            <div>
+                <p>صينية تمر حشو مع زبدة</p>
+                <p><span class="old-price">20</span> الكيلو: 15</p>
             </div>
-            <p>صينية تمر حشو مع زبدة</p>
         </div>
         <div class="item">
-            <img src="siniya2.jpg" alt="صينية بكيلة مع سمن" class="item-image">
-            <div class="price-bar">
-                <p>السعر قبل الخصم: 25</p>
-                <p>الكيلو بعد الخصم: 20</p>
+            <div>
+                <p>صينية بكيلة مع سمن</p>
+                <p><span class="old-price">25</span> الكيلو: 20</p>
             </div>
-            <p>صينية بكيلة مع سمن</p>
         </div>
     </section>
 
     <section class="section">
         <h2>بوكس التوزيع</h2>
         <div class="item">
-            <img src="box1.jpg" alt="بوكس قشد" class="item-image">
-            <div class="price-bar">
-                <p>السعر قبل الخصم: 15</p>
-                <p>السعر: 10</p>
+            <div>
+                <p>بوكس قشد</p>
+                <p><span class="old-price">15</span> السعر: 10</p>
             </div>
-            <p>بوكس قشد</p>
         </div>
         <div class="item">
-            <img src="box2.jpg" alt="بوكس تمر سكري محشي" class="item-image">
-            <div class="price-bar">
-                <p>السعر قبل الخصم: 40</p>
-                <p>السعر: 35</p>
+            <div>
+                <p>بوكس تمر سكري محشي</p>
+                <p><span class="old-price">40</span> السعر: 35</p>
             </div>
-            <p>بوكس تمر سكري محشي</p>
         </div>
     </section>
 
