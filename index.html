@@ -43,6 +43,7 @@
             margin-bottom: 20px;
             cursor: pointer; /* إضافة مؤشر الفأرة للإشارة إلى أن العنصر قابل للنقر */
             position: relative; /* لتحديد موقع شريط المنتجات بالنسبة للعنصر */
+            text-align: center; /* لتوسيط العناصر */
         }
         .item p {
             color: green; /* لون أسماء الأصناف */
@@ -59,7 +60,7 @@
             vertical-align: middle; /* ضبط محاذاة الشعار */
         }
         .item-image {
-            width: 100%; /* تحديد عرض الصورة بالنسبة لعرض العنصر */
+            max-width: 100%; /* تحديد عرض الصورة بحد أقصى ليتناسب مع عرض العنصر */
             height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
             border-radius: 10px; /* إضافة تدوير للصورة */
         }
@@ -71,6 +72,7 @@
             padding: 5px; /* تباعد داخلي للسعر */
             border-bottom-right-radius: 10px; /* تدوير الحواف للسعر */
             width: 100%; /* تحديد عرض السعر بالنسبة لعرض الصورة */
+            text-align: center; /* توسيط السعر داخل الصورة */
         }
         .price p {
             margin: 0; /* إزالة التباعد الخارجي للنص */
@@ -86,6 +88,8 @@
         .product {
             display: inline-block; /* عرض العناصر بشكل افقي */
             margin-right: 20px; /* تباعد بين العناصر */
+            vertical-align: top; /* توجيه العناصر للأعلى */
+            position: relative; /* تحديد الوضع النسبي للعنصر */
         }
         .product:hover .price {
             transform: translateY(0); /* إعادة تحريك السعر للموضع الأصلي عند تحويل المؤشر عليها */
